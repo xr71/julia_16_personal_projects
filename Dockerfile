@@ -7,5 +7,6 @@ COPY Project.toml .
 ENV JULIA_PROJECT=/app
 RUN julia -e 'using Pkg; Pkg.instantiate()'
 
-ENTRYPOINT ["bash"]
+EXPOSE 1234
 
+ENTRYPOINT ["bash"]
