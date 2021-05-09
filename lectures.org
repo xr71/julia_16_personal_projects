@@ -1,0 +1,2 @@
+#+title: Julia Computational Thinking Lecture Notes
+

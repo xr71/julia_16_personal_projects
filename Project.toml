@@ -1,8 +1,10 @@
 [deps]
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
 Gumbo = "708ec375-b3d6-5a57-a7ce-8257bf98657a"
 HTTP = "cd3eb016-35fb-5094-929b-558a96fad6f3"
 JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 Mongoc = "4fe8b98c-fc19-5c23-8ec2-168ff83495f2"
 OrderedCollections = "bac558e1-5e72-5ebc-8fee-abe8a469f55d"
 Pluto = "c3e4b0f8-55cb-11ea-2926-15256bba5781"

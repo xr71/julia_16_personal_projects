@@ -1,0 +1,119 @@
+#+TITLE: Diff Eq Notes
+
+
+- Topic: Exponential Models and Differential Equations
+  2021-05-09
+  
+How to model things with Differential Equations
+
+* Example 1
+  Modeling Population
+  * p = population
+    t = time (in days)
+
+  * dP/dt = kP
+  * this is a separable diff equation, so let's re-write it
+
+    (1/P)dP = (k)dt
+
+    therefore:
+    integral((1/P)dP) = integral((k)dt)
+
+  * ln(P) = kt + C
+
+    * let's rewrite this using exp
+      P = e^(kt + C)
+      or
+      P = e^(kt) * e^(C)
+      simplify further
+      P = Ce^(kt)
+
+    
+* Example 2
+  * continuing the previous function: let's assume
+    t=0, P=100
+    t=50, P=200
+
+  * at t=0, we have 100 = Ce^0, hence, C=100
+  * at t=50, we have 200 = 100*e^(50k)  therefore:
+    ln(2) = ln(e^(50k))
+    ln(2) = 50k
+    In other words:  k = (ln(2)) / 50
+
+    In conclusion:  our population function as a function of t is
+    P(t) = 100e^((ln(2)/50)*t)
+  
+    
+* Example 3
+  * dy/dx = 3y
+    y=2
+    x=1
+  * 1/y dy = 3dx
+    * integrate both sides
+    * ln(y) = 3x + C
+    * y = e^(3x+C)
+  * y = Ce^(3x)
+
+  * when y=2 and x=1, we have:
+    2 = Ce^3, or
+    2/(e^3) = C
+  * y = 2e^(-3)e(3x)
+    we can simplify:
+    y = 2e^(3x-3)
+    
+
+- Practice:
+
+* dy/dt = 2y, and y=8 when t=0
+  * This is a separable function
+    so we have 1/y(dy) = 2(dt)
+    we can integrate both sides
+    ln(y) = 2t + C
+  * simplify:  y = e^(2t+C)
+    simplify: y = Ce^(2t)
+    * substitute: y=8 when t=0
+      8 = C
+  * In conclusion:
+    y = 8e^(2t)
+    
+* dy/dt = y, and y=1 when t=4
+  * This is separable function
+    (1/y)dy = dt
+    Simply: ln(y) = t + C
+    y = Ce^(t)
+  * 1 = Ce^(4)
+    C = 1/(e^4)
+    or C ~= 0.018315638888734182
+
+    * Therefore: y = e^(-4) * e^(t) or y=e^(t-4)
+
+* dy/dx = -5y, y=4 when x=0
+  * (1/y)dy = -5(dx)
+    ln(y) = -5x + C
+    y = e^(-5x + C)
+    y = Ce^(-5x)
+  * 4 = Ce^0
+    C = 4
+  * y = 4e^(-5x)
+
+* dy/dt = -8y, and y=1 when t=1
+  * (1/y)dy = -8(dt)
+    ln(y) = -8t + C
+    y = e^(-8t+C)
+    y = Ce^(-8t)
+  * 1 = Ce^-8
+    1/(e^-8) = C
+    e^8 = C
+  * therefore: y=e^8 * e^(-8t)  or  y=e^(8-8t)
+
+
+  
+- Topic: Newton's Law of Cooling
+* Newton's Law of Cooling:  dT/dt = -K(T-T_a)
+  * separate:  1/(T-T_a)dT = -K(dt)
+  * integrate both sides:  ln(T-T_a) = -Kt + C
+    simplify:  T-T_a=e^(-Kt+C)
+    simplify:  T-T_a=Ce^(-Kt)
+  * Hotter:  T(t) = Ce^(-Kt) + T_a
+    Colder:  T(t) = T_a - Ce^(-Kt)
+
